@@ -49,7 +49,7 @@ We'll go through both of these steps together, using our Playlister domain model
 
 ## Overview
 
-In this walk-through, we'll be building out a domain model for our fictitious
+In this walk-through, we' ll be building out a domain model for our fictitious
 music playing app, Playlister. This app will catalog songs and their
 associated artists and genres.  
 
@@ -86,6 +86,8 @@ what that table will look like:
 
 We can see that the songs table will have an `artist_id` column and a `genre_id`
 column. We will give a given song an `artist_id` value of the artist it belongs
+
+
 to. The same goes for genre. These foreign keys, in conjunction with the
 Active Record association macros will allow our query to get an artist's songs or
 genres, a song's artist or genre, and a genre's songs and artists entirely
@@ -150,7 +152,7 @@ Let's take a look at what our genres table will need to look like:
 
 Let's write our migration. In `db/migrate/02_create_genres.rb`:
 
-```ruby
+```ruby                      
 class CreateGenres < ActiveRecord::Migration[4.2]
   def change
     create_table :genres do |t|
@@ -169,7 +171,7 @@ table creations.
 
 A macro is a method that writes code for us (think metaprogramming). By invoking
 a few methods that come with Active Record, we can implement all of the
-associations we've been discussing.
+associations we've been ffDasaA discussing.
 
 We'll be using the following AR macros (or methods):
 
